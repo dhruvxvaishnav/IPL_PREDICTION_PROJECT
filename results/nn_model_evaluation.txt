@@ -1,0 +1,19 @@
+Neural Network Model Evaluation
+============================
+
+small_nn:
+  Architecture: (50, 25)
+  Accuracy: 0.7110
+  ROC AUC: 0.8225
+
+medium_nn:
+  Architecture: (100, 50)
+  Accuracy: 0.7385
+  ROC AUC: 0.7757
+
+large_nn:
+  Architecture: (150, 75, 30)
+  Accuracy: 0.7018
+  ROC AUC: 0.8089
+
+Best Model: medium_nn with accuracy 0.7385

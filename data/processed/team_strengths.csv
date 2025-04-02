@@ -1,0 +1,12 @@
+team,matches_played,wins,win_rate,recent_form,form_score
+Delhi Capitals,28,12,0.42857142857142855,"[1, 0, 1, 0, 1]",0.6
+Rajasthan Royals,29,16,0.5517241379310345,"[0, 1, 0, 0, 0]",0.2
+Lucknow Super Giants,29,15,0.5172413793103449,"[1, 0, 0, 0, 1]",0.4
+Mumbai Indians,30,13,0.43333333333333335,"[0, 0, 1, 0, 0]",0.2
+Gujarat Titans,29,16,0.5517241379310345,"[1, 0, 0, 0, 1]",0.4
+Royal Challengers Bangalore,14,7,0.5,"[0, 1, 1, 0, 0]",0.4
+Punjab Kings,28,11,0.39285714285714285,"[0, 1, 0, 0, 1]",0.4
+Royal Challengers Bengaluru,15,7,0.4666666666666667,"[0, 1, 1, 1, 1]",0.8
+Kolkata Knight Riders,28,17,0.6071428571428571,"[1, 1, 1, 1, 1]",1.0
+Chennai Super Kings,30,17,0.5666666666666667,"[0, 1, 0, 1, 0]",0.4
+Sunrisers Hyderabad,30,13,0.43333333333333335,"[0, 1, 0, 1, 1]",0.6

@@ -1,0 +1,25 @@
+Model Evaluation Results
+======================
+
+RandomForest:
+  Initial CV Score: 0.6307
+  Best CV Score: 0.7110
+  Test Accuracy: 0.6743
+  ROC-AUC Score: 0.7471
+  Best Parameters: {'classifier__max_depth': 10, 'classifier__min_samples_split': 10, 'classifier__n_estimators': 100}
+
+GradientBoosting:
+  Initial CV Score: 0.6835
+  Best CV Score: 0.7110
+  Test Accuracy: 0.7294
+  ROC-AUC Score: 0.8175
+  Best Parameters: {'classifier__learning_rate': 0.01, 'classifier__max_depth': 3, 'classifier__n_estimators': 100}
+
+XGBoost:
+  Initial CV Score: 0.6479
+  Best CV Score: 0.7259
+  Test Accuracy: 0.6881
+  ROC-AUC Score: 0.7953
+  Best Parameters: {'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.01, 'classifier__max_depth': 4, 'classifier__n_estimators': 300}
+
+Best Overall Model: GradientBoosting with test accuracy of 0.7294
