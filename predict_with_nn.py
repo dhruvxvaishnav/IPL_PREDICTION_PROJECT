@@ -179,16 +179,37 @@ def get_available_teams():
         ]
 
 def get_venues():
-    """Return available venues"""
+    """Return available IPL 2024 venues only"""
     try:
         team_venue_stats = pd.read_csv('data/processed/team_venue_stats.csv')
-        return sorted(team_venue_stats['venue'].unique())
-    except:
+        # Filter for main venues only - add/remove as needed
+        main_venues = [
+            "M.A. Chidambaram Stadium, Chepauk",
+            "Wankhede Stadium, Mumbai",
+            "M. Chinnaswamy Stadium, Bengaluru",
+            "Eden Gardens, Kolkata",
+            "Arun Jaitley Stadium, Delhi",
+            "Rajiv Gandhi International Stadium, Uppal",
+            "Punjab Cricket Association Stadium, Mohali",
+            "Sawai Mansingh Stadium, Jaipur",
+            "Narendra Modi Stadium, Ahmedabad",
+            "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+        ]
+        # Only return venues in our list that exist in the data
+        return sorted([v for v in team_venue_stats['venue'].unique() if v in main_venues or any(m in v for m in main_venues)])
+    except Exception as e:
+        # Fallback to main venues
         return [
-            "M.A. Chidambaram Stadium", "Wankhede Stadium", "M. Chinnaswamy Stadium",
-            "Eden Gardens", "Arun Jaitley Stadium", "Rajiv Gandhi International Stadium",
-            "Punjab Cricket Association Stadium", "Sawai Mansingh Stadium", 
-            "Narendra Modi Stadium", "BRSABV Ekana Cricket Stadium"
+            "M.A. Chidambaram Stadium, Chepauk",
+            "Wankhede Stadium, Mumbai",
+            "M. Chinnaswamy Stadium, Bengaluru",
+            "Eden Gardens, Kolkata",
+            "Arun Jaitley Stadium, Delhi",
+            "Rajiv Gandhi International Stadium, Uppal",
+            "Punjab Cricket Association Stadium, Mohali",
+            "Sawai Mansingh Stadium, Jaipur",
+            "Narendra Modi Stadium, Ahmedabad",
+            "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
         ]
 
 def print_menu(options):
